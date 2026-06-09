@@ -115,6 +115,3 @@ logs/trading_bot.log
 
 
 
-
-Just tell me 👍
-```
