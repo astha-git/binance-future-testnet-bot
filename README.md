@@ -41,12 +41,12 @@ git clone https://github.com/astha-git/binance-future-testnet-bot.git
 cd binance-future-testnet-bot
 
 
-### 2. Create Virtual Environment (Optional but Recommended)
+### 2. Create Virtual Environment 
 
    bash
 python -m venv venv
 venv\Scripts\activate   # Windows
-source venv/bin/activate   # Mac/Linux
+
 
 ### 3. Install Dependencies
 
@@ -68,7 +68,12 @@ BINANCE_API_SECRET=your_testnet_api_secret
 * Create account or login
 * Generate API Key & Secret
 * Add them to `.env`
-
+.env
+### 6..gitignore
+__pycache__/
+.env
+*.pyc
+*.log
 ## Usage
 
 ### MARKET Order Example
