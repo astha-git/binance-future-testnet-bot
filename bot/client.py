@@ -1,14 +1,10 @@
-import os
-
-from dotenv import load_dotenv
 from binance.client import Client
+import os
+from dotenv import load_dotenv
 
 load_dotenv()
 
-
 class BinanceFuturesClient:
-
-    TESTNET_URL = "https://testnet.binancefuture.com"
 
     def __init__(self):
 
@@ -16,16 +12,13 @@ class BinanceFuturesClient:
         api_secret = os.getenv("BINANCE_API_SECRET")
 
         if not api_key or not api_secret:
-            raise ValueError(
-                "Missing Binance API credentials."
-            )
+            raise ValueError("Missing Binance API credentials")
 
         self.client = Client(
             api_key,
-            api_secret
+            api_secret,
+            testnet=True
         )
-
-        self.client.FUTURES_URL = self.TESTNET_URL
 
     def get_client(self):
         return self.client
